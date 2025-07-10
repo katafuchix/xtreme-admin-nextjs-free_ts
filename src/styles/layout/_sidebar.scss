@@ -1,0 +1,50 @@
+.sidebarArea {
+  flex-shrink: 0;
+  width: $sidebarWidth;
+  background-color: $sidebarColor;
+  .sidenav-bg:hover {
+    background-color: $gray-100;
+    border-radius: $border-radius;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .sidebarArea {
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    z-index: 1;
+    margin-left: -$sidebarWidth;
+    transition: 0.2s ease-in;
+    &.showSidebar {
+      margin-left: 0px;
+    }
+  }
+}
+
+
+/* アコーディオン全体の背景をフラットにする */
+.accordion-item {
+  background-color: transparent;
+  border: none;
+}
+
+/* ヘッダーの背景とホバー色を自然に */
+.accordion-button {
+  background-color: transparent;
+  color: inherit;
+  box-shadow: none;
+}
+
+/* 開いているときの矢印も自然な色に */
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: inherit;
+  box-shadow: none;
+}
+
+/* Bodyの背景も透明 or サイドバーと同じ色に */
+.accordion-body {
+  background-color: transparent;
+  padding-left: 0.75rem; /* 適度な余白だけ追加 */
+}
