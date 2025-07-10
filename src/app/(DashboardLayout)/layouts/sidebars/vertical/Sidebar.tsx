@@ -62,61 +62,61 @@ const navigation = [
 const Sidebar = ({ showMobilemenu }: { showMobilemenu: () => void }) => {
   const location = usePathname();
   const currentURL = location.slice(0, location.lastIndexOf('/'));
-/*
-  return (
-    
-    <div className="p-3">
-      <div className="d-flex align-items-center">
-        <Logo />
-        <span className="ms-auto d-lg-none">
-        <Button
-          close
-          size="sm"
-          onClick={showMobilemenu}
-        ></Button>
-        </span>
-      </div>
-      <div className="pt-4 mt-2">
-        <Nav vertical className="sidebarNav">
-          {navigation.map((navi, index) => (
-            <NavItem  key={index} className="sidenav-bg">
-              <Link 
-                  href={navi.href}
-                  className={
-                    location === navi.href
-                      ? "text-primary nav-link py-3"
-                      : "nav-link text-secondary py-3"
-                  }
-                >
-                  <i className={navi.icon}></i>
-                  <span className="ms-3 d-inline-block">{navi.title}</span>
-              </Link>
-            </NavItem>
-          ))}
+  /*
+    return (
+      
+      <div className="p-3">
+        <div className="d-flex align-items-center">
+          <Logo />
+          <span className="ms-auto d-lg-none">
           <Button
-            color="secondary"
-            tag="a"
-            target="_blank"
-            className="mt-3"
-            href="https://www.wrappixel.com/templates/xtreme-next-js-free-admin-template/"
-          >
-            Download Free
-          </Button>
-          <Button
-            color="danger"
-            tag="a"
-            target="_blank"
-            className="mt-3"
-            href="https://www.wrappixel.com/templates/xtreme-nextjs-admin-dashboard"
-          >
-            Upgrade To Pro
-          </Button>
-        </Nav>
+            close
+            size="sm"
+            onClick={showMobilemenu}
+          ></Button>
+          </span>
+        </div>
+        <div className="pt-4 mt-2">
+          <Nav vertical className="sidebarNav">
+            {navigation.map((navi, index) => (
+              <NavItem  key={index} className="sidenav-bg">
+                <Link 
+                    href={navi.href}
+                    className={
+                      location === navi.href
+                        ? "text-primary nav-link py-3"
+                        : "nav-link text-secondary py-3"
+                    }
+                  >
+                    <i className={navi.icon}></i>
+                    <span className="ms-3 d-inline-block">{navi.title}</span>
+                </Link>
+              </NavItem>
+            ))}
+            <Button
+              color="secondary"
+              tag="a"
+              target="_blank"
+              className="mt-3"
+              href="https://www.wrappixel.com/templates/xtreme-next-js-free-admin-template/"
+            >
+              Download Free
+            </Button>
+            <Button
+              color="danger"
+              tag="a"
+              target="_blank"
+              className="mt-3"
+              href="https://www.wrappixel.com/templates/xtreme-nextjs-admin-dashboard"
+            >
+              Upgrade To Pro
+            </Button>
+          </Nav>
+        </div>
       </div>
-    </div>
-  );
-};
-*/
+    );
+  };
+  */
 
 
   return (
@@ -127,7 +127,11 @@ const Sidebar = ({ showMobilemenu }: { showMobilemenu: () => void }) => {
           <Button close size="sm" onClick={showMobilemenu}></Button>
         </span>
       </div>
+
+
+
       <div className="pt-4 mt-2">
+        <h6 className="border-bottom p-3 mb-0 ">Small Size Buttons</h6>
         <Nav vertical className="sidebarNav">
           {/* 単独リンク: Dashboard */}
           <NavItem className="sidenav-bg">
